@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document!</title>
+    <title>Modern Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <form id="modern-form">
+            <h2>Register Here</h2>
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name">Name</label>
+                <span class="bar"></span>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <span class="bar"></span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <span class="bar"></span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirm-password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <span class="bar"></span>
+            </div>
+            <button type="submit">Register</button>
+            <p class="message" id="message"></p>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
