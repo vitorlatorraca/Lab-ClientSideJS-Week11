@@ -111,3 +111,41 @@ button:hover {
     color: #f44336;
     visibility: hidden;
 }
+
+select {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    transition: border-bottom 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    outline: none;
+    border-bottom: 2px solid #00bcd4;
+}
+
+select option {
+    background: #333;
+    color: #fff;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-bottom: 2px solid #00bcd4;
+}
+
+select:focus ~ label,
+select:valid ~ label {
+    top: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: #00bcd4;
+}

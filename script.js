@@ -7,14 +7,19 @@ document.getElementById('modern-form').addEventListener('submit', function(e) {
     const confirmPassword = document.getElementById('confirm-password').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const dob = document.getElementById('dob').value;
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const country = document.getElementById('country').value.trim();
+    const gender = document.getElementById('gender').value;
     const message = document.getElementById('message');
 
     // Clear previous messages
     message.style.color = '#f44336';
     message.style.visibility = 'hidden';
-    
+
     // Basic validation for empty fields
-    if (!name || !email || !password || !confirmPassword || !phone || !dob) {
+    if (!name || !email || !password || !confirmPassword || !phone || !dob || !address || !city || !state || !country || !gender) {
         message.textContent = "Please fill in all fields!";
         message.style.visibility = 'visible';
         return;
