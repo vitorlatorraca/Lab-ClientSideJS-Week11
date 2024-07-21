@@ -39,7 +39,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-input {
+input, select {
     background: transparent;
     border: none;
     border-bottom: 2px solid #555;
@@ -50,7 +50,7 @@ input {
     transition: border-bottom 0.3s;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
     border-bottom: 2px solid #00bcd4;
 }
@@ -66,7 +66,9 @@ label {
 }
 
 input:focus ~ label,
-input:valid ~ label {
+input:valid ~ label,
+select:focus ~ label,
+select:valid ~ label {
     top: -20px;
     left: 10px;
     font-size: 14px;
@@ -85,8 +87,19 @@ input:valid ~ label {
     transition: transform 0.3s;
 }
 
-input:focus ~ .bar {
+input:focus ~ .bar, select:focus ~ .bar {
     transform: scaleX(1);
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select option {
+    background: #333;
+    color: #fff;
 }
 
 button {
@@ -110,42 +123,4 @@ button:hover {
     font-size: 16px;
     color: #f44336;
     visibility: hidden;
-}
-
-select {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #555;
-    padding: 10px;
-    color: #fff;
-    font-size: 18px;
-    width: 100%;
-    transition: border-bottom 0.3s;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-select:focus {
-    outline: none;
-    border-bottom: 2px solid #00bcd4;
-}
-
-select option {
-    background: #333;
-    color: #fff;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-bottom: 2px solid #00bcd4;
-}
-
-select:focus ~ label,
-select:valid ~ label {
-    top: -20px;
-    left: 10px;
-    font-size: 14px;
-    color: #00bcd4;
 }
